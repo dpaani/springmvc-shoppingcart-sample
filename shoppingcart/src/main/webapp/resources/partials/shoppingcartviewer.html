@@ -1,0 +1,24 @@
+
+<div class="page-header">
+	<h1>Shopping Cart Bucket #{{shoppingBucket}} </h1>
+</div>
+
+<section  class="row-fluid">
+
+	<h3>Input Data </h3>
+	<ul>
+	  <li  ng-repeat="str in input">{{str}}</li>
+	</ul>
+
+	<h3>Purcahse Order Receipt</h3>
+	<ul>
+	  	<li  ng-repeat="item in purcahseReceipt.lineItems">{{item.quantity}} &nbsp;{{item.product.description}}: {{item.totalCost| number:2}}</li>
+	</ul>
+	<ul class="unstyled">
+		<li><h4>Sales Taxes: {{purcahseReceipt.salesTax | number:2}}</h4></li>
+	</ul>
+	<ul class="unstyled">
+		<li><h4>Total: {{purcahseReceipt.total | number:2}}</h4></li>
+	</ul>
+
+</section>
