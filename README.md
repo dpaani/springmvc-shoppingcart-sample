@@ -90,35 +90,42 @@ Services Details
 ----------------
 
 1. Loads bucket to shopping cart
+
 	URL Pattern - GET http://localhost:8080/shoppingcart/loadcart/{bucket}
 	Sample URL - GET http://localhost:8080/shoppingcart/loadcart/1
 	Bucket values : 1, 2, 3
 
 	Response -  HTTP 200
+	
 
 2. GET http://localhost:8080/shoppingcart/viewcart
 
+
 3. View Bucket input data
+
 
 	URL Pattern -  GET http://localhost:8080/shoppingcart/viewbucketinput?bucket={bucket}
 	Sample URL - GET http://localhost:8080/shoppingcart/viewbucketinput?bucket=1
 
 	Bucket values : 1, 2, 3
+	
 
 	Sample Response
-	---------------
+	
+
 	[
 		"1 book at 12.49",
 		"1 music CD at 14.99",
 		"1 chocolate bar at 0.85"
 	]
+	
 
 
 4. View purchase receipt ( this service will return data that is currently stored in shopping cart)
+
 	URL pattern - http://localhost:8080/shoppingcart/report/purchase
 
 	Sample Response
-	----------------
 		{
 	   lineItems:[
 	      {
@@ -158,24 +165,30 @@ Services Details
 	   salesTax:1.5,
 	   total:29.83
 	}
+	
 
 5. Add new line items to shopping cart -
 	URL Pattern - POST hhttp://localhost:8080/shoppingcart/addcart
 
 	Request payload sample
-	--------------------
+
 	1 music MP3 CD1 at 20.00
+	
 
 	After adding data, please use http://localhost:8080/shoppingcart/report/purchase to view data in shopping cart
+	
 
 6. Error response - In case of exception, exception object will be converted to ErrorResponse object and return appropriate HTTP error code back to client
+
     Sample invalid ERROR URL - http://localhost:8080/shoppingcart/loadcart/4
+    
 
 	Sample Error response
-	------------------------
+
 	{
 	   "errorReferenceId":"81db7119-4a75-4cbb-a0aa-4b64211afeef",
 	   "name":null,
 	   "type":"NOT_FOUND",
 	   "message":"class path resource [data/input11] cannot be opened because it does not exist"
 	}
+	
