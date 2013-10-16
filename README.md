@@ -66,11 +66,15 @@ caluclate total and sales tax and show purchase receipt.
 
 Assumption
 -------------------
-1. No security required
-2. No database required
-3. Shopping cart data will be stroed temporarily
-4. Implementation can be done using any latest technology and this solution uses Spring
-5. Require maven to run this application
+1. Shopping cart data will be stored temporarily
+2. Implementation can be done using any latest technology and this solution uses spring framework
+3. Require maven to run this application
+4. The following assumption is made from the input requirement
+	a. System will decide whether a product is imported or not based on imported token from the product description
+	b. Every line item in the input data will use this format <Qty> <imported> <desc> at <price>
+     c. Exempt items are determined from these text chocolate, pills, book
+5. Sales tax percentage should be a configuration parameter
+
 
 To get started, please complete the following steps:
 
