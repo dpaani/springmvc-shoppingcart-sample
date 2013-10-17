@@ -82,7 +82,7 @@ To get started, please complete the following steps:
 2. Extract the file to a folder
 3. Go to the exracted project root folder
 4. Run this command from Terminal/Command Line - "run mvn clean install mvn jetty:run" and wait for server to start successfully
-5. Open any broser and go to this url - http://localhost:8080/shoppingcart/
+5. Open any browser and go to this url - http://localhost:8080/shoppingcart/
 
 
 Technology Used
